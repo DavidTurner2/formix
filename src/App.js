@@ -46,7 +46,7 @@ function App() {
          type="text"
          onChange={formik.handleChange}
          value={formik.values.password}
-       />
+       /> {formik.errors.password ? <div id="pswError" style={{ color: "red" }}> {formik.errors.password}</div> :null}
        <button type="submit">Submit</button>
      </form>
       {/* <ToDoClass /> */}
